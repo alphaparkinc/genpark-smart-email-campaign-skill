@@ -23,23 +23,23 @@ SUBJECT_TEMPLATES = {
     "welcome": [
         "Welcome to {brand}! Here is a gift for you",
         "You are in! Your {brand} journey starts now",
-        "{brand} loves you — here is 10% off your first order",
-        "Hello from {brand} — let us get you started",
+        "{brand} loves you -- here is 10% off your first order",
+        "Hello from {brand} -- let us get you started",
     ],
     "abandoned_cart": [
         "You left something behind... {product} is waiting",
-        "Your cart misses you — complete your {brand} order",
+        "Your cart misses you -- complete your {brand} order",
         "Still thinking? {product} may sell out soon",
         "Forgot something? Your {brand} cart is saved",
     ],
     "winback": [
         "We miss you! Come back to {brand} for {discount}% off",
-        "It has been a while — here is {discount}% to welcome you back",
+        "It has been a while -- here is {discount}% to welcome you back",
         "{brand} has changed. Come see what is new",
         "Your exclusive re-engagement offer from {brand}",
     ],
     "promotional": [
-        "{discount}% OFF {product} — Today Only!",
+        "{discount}% OFF {product} -- Today Only!",
         "Flash Sale: Save {discount}% on {product}",
         "Limited time: {discount}% off at {brand}",
         "Your {discount}% discount is live now",
@@ -48,111 +48,78 @@ SUBJECT_TEMPLATES = {
         "{brand} Insider: This week top picks",
         "What is trending at {brand} right now",
         "Your {brand} monthly digest is here",
-        "New arrivals + deals — your {brand} update",
+        "New arrivals + deals -- your {brand} update",
     ],
     "post_purchase": [
         "Thank you for your {brand} order!",
         "Your {product} is on its way",
-        "Order confirmed — here is what happens next",
+        "Order confirmed -- here is what happens next",
         "Rate your experience with {product}",
     ],
 }
 
 BODY_TEMPLATES = {
-    "welcome": """Hi there,
-
-Welcome to {brand}! We are thrilled to have you join our community.
-
-As a welcome gift, here is an exclusive offer just for you:
-
-    USE CODE: WELCOME10
-    Save 10% on your first order — no minimum required.
-
-Browse our bestsellers and discover products you will love.
-
-[Shop Now]
-
-Questions? We are always here to help.
-
-With love,
-The {brand} Team
-""",
-    "abandoned_cart": """Hi,
-
-You left {product} in your cart — and it is still waiting for you!
-
-We saved your cart so you can pick up right where you left off.
-{discount_line}
-[Complete Your Purchase]
-
-Hurry — stock is limited and we cannot hold it forever.
-
-See you soon,
-{brand}
-""",
-    "winback": """Hi,
-
-We noticed it has been a while since your last visit to {brand}, and we miss you!
-
-To welcome you back, we are offering you an exclusive discount:
-
-    {discount_pct}% OFF your next order
-    Use code: COMEBACK{discount_pct}
-
-[Claim Your Discount]
-
-We have got exciting new arrivals and deals you do not want to miss.
-
-We hope to see you soon,
-The {brand} Team
-""",
-    "promotional": """Hi,
-
-Great news — your exclusive {discount_pct}% discount on {product} is live!
-
-This is a limited-time offer available only to valued customers like you.
-
-    SAVE {discount_pct}% — Offer ends midnight tonight
-
-[Shop {product} Now]
-
-Do not miss out — these deals sell fast.
-
-Happy shopping,
-{brand}
-""",
-    "newsletter": """Hi,
-
-Here is your {brand} weekly roundup — curated just for you.
-
-THIS WEEK HIGHLIGHTS:
-  - New arrivals in {product}
-  - Top-rated customer picks
-  - Exclusive member deals
-
-[View All New Arrivals]
-
-Stay in the loop,
-The {brand} Team
-""",
-    "post_purchase": """Hi,
-
-Thank you for your {brand} order!
-
-Your {product} is confirmed and being prepared for shipment.
-You will receive a tracking link once it ships.
-
-ORDER SUMMARY:
-  - Product: {product}
-  - Status: Processing
-
-[Track Your Order]
-
-We hope you love your purchase. Feel free to reply with any questions.
-
-Warm regards,
-{brand}
-""",
+    "welcome": (
+        "Hi there,\n\n"
+        "Welcome to {brand}! We are thrilled to have you join our community.\n\n"
+        "As a welcome gift, here is an exclusive offer just for you:\n\n"
+        "    USE CODE: WELCOME10\n"
+        "    Save 10% on your first order -- no minimum required.\n\n"
+        "Browse our bestsellers and discover products you will love.\n\n"
+        "[Shop Now]\n\n"
+        "Questions? We are always here to help.\n\n"
+        "With love,\nThe {brand} Team"
+    ),
+    "abandoned_cart": (
+        "Hi,\n\n"
+        "You left {product} in your cart -- and it is still waiting for you!\n\n"
+        "We saved your cart so you can pick up right where you left off.\n"
+        "{discount_line}\n"
+        "[Complete Your Purchase]\n\n"
+        "Hurry -- stock is limited and we cannot hold it forever.\n\n"
+        "See you soon,\n{brand}"
+    ),
+    "winback": (
+        "Hi,\n\n"
+        "We noticed it has been a while since your last visit to {brand}, and we miss you!\n\n"
+        "To welcome you back, we are offering you an exclusive discount:\n\n"
+        "    {discount_pct}% OFF your next order\n"
+        "    Use code: COMEBACK{discount_pct}\n\n"
+        "[Claim Your Discount]\n\n"
+        "We have got exciting new arrivals and deals you do not want to miss.\n\n"
+        "We hope to see you soon,\nThe {brand} Team"
+    ),
+    "promotional": (
+        "Hi,\n\n"
+        "Great news -- your exclusive {discount_pct}% discount on {product} is live!\n\n"
+        "This is a limited-time offer available only to valued customers like you.\n\n"
+        "    SAVE {discount_pct}% -- Offer ends midnight tonight\n\n"
+        "[Shop {product} Now]\n\n"
+        "Do not miss out -- these deals sell fast.\n\n"
+        "Happy shopping,\n{brand}"
+    ),
+    "newsletter": (
+        "Hi,\n\n"
+        "Here is your {brand} weekly roundup -- curated just for you.\n\n"
+        "THIS WEEK HIGHLIGHTS:\n"
+        "  - New arrivals in {product}\n"
+        "  - Top-rated customer picks\n"
+        "  - Exclusive member deals\n\n"
+        "[View All New Arrivals]\n\n"
+        "Stay in the loop,\nThe {brand} Team"
+    ),
+    "post_purchase": (
+        "Hi,\n\n"
+        "Thank you for your {brand} order!\n\n"
+        "Your {product} is confirmed and being prepared for shipment.\n"
+        "You will receive a tracking link once it ships.\n\n"
+        "ORDER SUMMARY:\n"
+        "  - Product: {product}\n"
+        "  - Status: Processing\n\n"
+        "[Track Your Order]\n\n"
+        "We hope you love your purchase. Feel free to reply with any questions.\n\n"
+        "Warm regards,\n{brand}"
+    ),
 }
 
 
@@ -191,16 +158,16 @@ class EmailCampaignClient:
         Returns:
             dict with: campaign_type, subject_lines, email_body, best_send_time
         """
-        discount_str = f"{int(discount_pct)}%" if discount_pct else "exclusive"
-        discount_line = f"
-    Use code SAVE{int(discount_pct)} for {int(discount_pct)}% off!
-" if discount_pct else ""
+        discount_line = ""
+        if discount_pct:
+            discount_line = "    Use code SAVE{0} for {0}% off!".format(int(discount_pct))
 
         # Generate subject lines
         templates = SUBJECT_TEMPLATES.get(campaign_type, SUBJECT_TEMPLATES["promotional"])
-        random.shuffle(templates)
+        shuffled = list(templates)
+        random.shuffle(shuffled)
         subject_lines = []
-        for tmpl in templates[:num_variants]:
+        for tmpl in shuffled[:num_variants]:
             subject = tmpl.format(
                 brand=brand_name,
                 product=product_name or "our new collection",
@@ -230,10 +197,11 @@ class EmailCampaignClient:
         }
 
     def batch_build(self, campaigns: list[dict]) -> list[dict]:
+        """Build multiple campaigns at once."""
         return [self.build_campaign(**c) for c in campaigns]
 
     def _score_subject(self, subject: str, campaign_type: str, segment: str) -> float:
-        """Heuristic open rate score 0.0-1.0 based on best practices."""
+        """Heuristic open rate score 0.0-1.0 based on email best practices."""
         score = 0.5
         length = len(subject)
         if 30 <= length <= 50:
