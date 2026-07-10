@@ -1,8 +1,8 @@
 {
   "name": "smart-email-campaign-skill",
   "version": "1.0.0",
-  "description": "Build personalized e-commerce email campaigns with subject line generation, body templates, segmentation targeting, and send-time optimization.",
-  "author": "alphaparkinc",
+  "description": "GenPark AI Agent Skill - Build personalized e-commerce email campaigns with subject line generation, body templates, segmentation targeting, and send-time optimization.",
+  "author": "genpark",
   "category": "marketing",
   "tags": [
     "email",
